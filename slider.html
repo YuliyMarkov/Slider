@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="./splide-4.1.3/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <h2 class="h2">ВСЕ ЕЩЕ СОМНЕВАЕШЬСЯ?</h2>
+      <p class="hesitationtext">
+        Тогда последний козырь: после каждого выпуска мы устраиваем крутые
+        вечеринки в честь вручения дипломов!
+      </p>
+      <div
+        class="splide"
+        id="second-slider"
+        role="group"
+        aria-label="Splide2 Basic HTML Example"
+      >
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="./Images/slider_image_01.png" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="./Images/slider_image_02.png" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="./Images/slider_image_03.png" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="./Images/slider_image_04.png" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img src="./Images/slider_image_05.png" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="./splide-4.1.3/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof Splide !== "undefined") {
+          var splide = new Splide(".splide", {
+            perPage: 3,
+            gap: 10,
+            rewind: true,
+            arrows: false,
+            pagination: false,
+            breakpoints: {
+              500: {
+                perPage: 1,
+              },
+            },
+          });
+          splide.mount();
+        } else {
+          console.error("Splide.js библиотека не загружена");
+        }
+      });
+    </script>
+  </body>
+</html>
